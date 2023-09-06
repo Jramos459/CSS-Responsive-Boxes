@@ -1,3 +1,86 @@
+/* Add styles to the specific sections */
+
 body {
-  background: papayawhip;
+  background: rgb(107, 116, 117);
 }
+
+* {
+  border: 2px solid rgb(35, 106, 106);
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sub_container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  flex-grow: 3;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+  
+}
+
+header, footer, aside, .sub_container  {
+  flex-grow: 1;
+  margin: .5em;
+  max-height: 10vh;
+}
+
+aside  {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  min-height: 20vh;
+  position: relative; /* Add relative positioning to the aside container */
+
+}
+
+aside > div {
+  flex-grow: 10;
+  margin: .5em;
+  
+}
+
+main {
+  width: 90%;
+  flex-grow: 3;
+  margin: .5em;
+}
+
+
+@media (min-width: 600px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  header {
+    width: 100%;
+    max-height: 10vh;
+    width: 100%;
+    max-height: 10vh;
+    color: rgb(9, 9, 9);
+    background: #fcfcfc80;
+  }
+  .sub_container {
+    justify-content: stretch;
+    flex-basis: 70%;
+      min-height:  80vh;
+      background: #fcfcfc80;
+      
+  }
+  footer {
+    margin: .5em;
+    flex-grow: 3;
+    min-height:  80vh;
+    background: #fcfcfc80;
+  }
+  
+  }
+

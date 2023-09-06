@@ -1,3 +1,46 @@
+/* Set the background color of the entire page to a shade of blue */
 body {
-  background: blanchedalmond;
+  background: rgb(11, 0, 223);
+}
+
+/* Apply a teal border to all elements on the page */
+* {
+  border: 1px solid teal;
+}
+
+/* Create a container for page content */
+.container {
+  display: flex;
+  min-height: 100vh; /* Ensure the container takes at least the viewport height */
+  flex-direction: column; /* Arrange child elements vertically */
+  justify-content: space-between; /* Distribute space between header and footer */
+}
+
+/* Make the header and footer elements grow to fill available space */
+header, footer  {
+  flex-grow: 1;
+}
+
+/* Make the main content area grow three times more than header and footer */
+main {
+  flex-grow: 3;
+}
+
+/* Apply responsive styles for screens with a minimum width of 600px */
+@media (min-width: 600px) {
+  /* Change the container layout to a row and allow elements to wrap */
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  /* Make the header span the entire width of the container */
+  header {
+    width: 100%;
+  }
+
+  /* Add margin to main, footer, and header to create spacing */
+  main, footer, header {
+    margin: 1em;
+  }
 }
